@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['id_pac'])) {
-    header("Location: ../php/home.php");
-    exit();
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_pac = $_SESSION['id_pac'];
