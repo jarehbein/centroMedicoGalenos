@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Adicional de Paciente</title>
+    <style>
+        /* Estilos para hacerlo más bonito, pero no esencial */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registro Adicional de Paciente</h2>
+
+    <form action="registro.php" method="post">
+        <!-- Aquí incluyes el RUT como un campo oculto para enviarlo al siguiente paso -->
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
+
+        <label for="ap_paterno">Apellido Paterno:</label>
+        <input type="text" id="ap_paterno" name="ap_paterno" placeholder="Ingrese su apellido paterno" required>
+
+        <label for="ap_materno">Apellido Materno:</label>
+        <input type="text" id="ap_materno" name="ap_materno" placeholder="Ingrese su apellido materno" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+
+        <label for="fecha_nac">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nac" name="fecha_nac" required>
+
+        <label for="id_genero">Género:</label>
+        <!-- Puedes usar un menú desplegable (select) para el género -->
+        <select id="id_genero" name="id_genero" required>
+            <option value="femenino">Femenino</option>
+            <option value="Masculino">Masculinoo</option>
+            <!-- Agrega más opciones según tu necesidad -->
+        </select>
+
+        <label for="id_prevision">Previsión:</label>
+        <!-- Puedes usar un menú desplegable (select) para la previsión -->
+        <select id="id_prevision" name="id_prevision" required>
+            <option value="fonasa">Fonasa</option>
+            <option value="isapre">Isapre</option>
+            <!-- Agrega más opciones según tu necesidad -->
+        </select>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+</body>
+</html>

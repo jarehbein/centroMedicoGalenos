@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Centro Médico Galenos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reservas.css">
+    <link rel="icon" type="image/x-icon" href="../img/icon.png">
+    <script>
+        function validarRut() {
+            var rutInput = document.getElementById("rut");
+            var rutValue = rutInput.value.replace(/[^\d]/g, ''); // Permitir solo dígitos
+
+            if (rutValue.length > 9) {
+                rutInput.value = rutValue.slice(0, 9); // Limitar a 9 dígitos
+            }
+
+            return true; // Permitir el envío del formulario
+        }
+    </script>
+</head>
+<body>
+  
+    <h2>Reserva de Horas Médicas</h2>
+  
+    <form action="../php/reserva.php" method="post" onsubmit="return validarRut();">
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT" required maxlength="9" oninput="validarRut()">
+  
+        <button type="submit">Ir al Registro</button>
+    </form>
+  
+    <footer>
+        <p>© 2023 - Centro Medico Galenos </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Horas Médicas</title>
+    <style>
+        /* Estilos para hacerlo más bonito, pero no esencial */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Reserva de Horas Médicas</h2>
+
+    <form action="procesar_reserva.php" method="post">
+        <!-- Aquí puedes incluir el RUT obtenido en el registro o en la sesión del usuario -->
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT" required>
+
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" id="especialidad" name="especialidad" placeholder="Ingrese la especialidad médica" required>
+
+        <label for="fecha">Fecha de Reserva:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora de Reserva:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <button type="submit">Reservar Hora Médica</button>
+    </form>
+
+</body>
+</html>
