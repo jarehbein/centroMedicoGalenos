@@ -34,9 +34,9 @@
 
     <h2>Registro Adicional de Paciente</h2>
 
-    <form action="registro.php" method="post">
+    <form action="../php/registro.php" method="post">
         <!-- Aquí incluyes el RUT como un campo oculto para enviarlo al siguiente paso -->
-
+        <input type="hidden" name="rut" value="<?php echo isset($_SESSION['rut']) ? $_SESSION['rut'] : ''; ?>">
         <label for="nombres">Nombres:</label>
         <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
 
@@ -58,16 +58,16 @@
         <label for="id_genero">Género:</label>
         <!-- Puedes usar un menú desplegable (select) para el género -->
         <select id="id_genero" name="id_genero" required>
-            <option value="femenino">Femenino</option>
-            <option value="Masculino">Masculinoo</option>
+            <option value="1">Femenino</option>
+            <option value="2">Masculino</option>
             <!-- Agrega más opciones según tu necesidad -->
         </select>
 
         <label for="id_prevision">Previsión:</label>
         <!-- Puedes usar un menú desplegable (select) para la previsión -->
         <select id="id_prevision" name="id_prevision" required>
-            <option value="fonasa">Fonasa</option>
-            <option value="isapre">Isapre</option>
+            <option value="1">Fonasa</option>
+            <option value="2">Isapre</option>
             <!-- Agrega más opciones según tu necesidad -->
         </select>
 
