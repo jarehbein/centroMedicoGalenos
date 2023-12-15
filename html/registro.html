@@ -36,7 +36,9 @@
 
     <form action="../php/registro.php" method="post">
         <!-- Aquí incluyes el RUT como un campo oculto para enviarlo al siguiente paso -->
-        <input type="hidden" name="rut" value="<?php echo isset($_SESSION['rut']) ? $_SESSION['rut'] : ''; ?>">
+        <label for="rut">Rut:</label>
+        <input type="text" id="id_pac" name="id_pac" placeholder="Ingrese su rut" required>
+
         <label for="nombres">Nombres:</label>
         <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
 

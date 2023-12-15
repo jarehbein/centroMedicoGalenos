@@ -34,13 +34,19 @@
 
     <h2>Reserva de Horas Médicas</h2>
 
-    <form action="procesar_reserva.php" method="post">
-        <!-- Aquí puedes incluir el RUT obtenido en el registro o en la sesión del usuario -->
-        <label for="rut">RUT:</label>
-        <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT" required>
+    <form action="../php/pedir_hora.php" method="post">
+        <!-- Campo oculto para enviar el id_pac -->
+        <input type="hidden" name="id_pac" value="<?php echo isset($_SESSION['id_pac']) ? $_SESSION['id_pac'] : ''; ?>">
 
-        <label for="especialidad">Especialidad:</label>
-        <input type="text" id="especialidad" name="especialidad" placeholder="Ingrese la especialidad médica" required>
+        <label for="id_especialidad">Especialidad:</label>
+        <!-- Puedes usar un menú desplegable (select) para el género -->
+        <select id="id_especialidad" name="id_especialidad" required>
+            <option value="1">Medicina General</option>
+            <option value="2">Kinesiología</option>
+            <option value="3">Oftalmología</option>
+            <option value="4">Otorrinolaringología</option>
+            <!-- Agrega más opciones según tu necesidad -->
+        </select>
 
         <label for="fecha">Fecha de Reserva:</label>
         <input type="date" id="fecha" name="fecha" required>

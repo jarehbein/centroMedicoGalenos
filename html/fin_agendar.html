@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Reserva</title>
+    <style>
+        /* Estilos para hacerlo más bonito, pero no esencial */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Confirmación de Reserva</h2>
+
+    <p>Su hora de atención ha sido registrada con éxito. Aquí está la información de su reserva:</p>
+
+    <p><strong>ID del Paciente:</strong> <?php echo $id_pac; ?></p>
+    <p><strong>Especialidad:</strong> <?php echo $especialidad; ?></p>
+    <p><strong>Fecha de Reserva:</strong> <?php echo $fecha; ?></p>
+    <p><strong>Hora de Reserva:</strong> <?php echo $hora; ?></p>
+
+</body>
+</html>
